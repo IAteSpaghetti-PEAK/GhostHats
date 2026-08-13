@@ -5,7 +5,7 @@ using HarmonyLib;
 namespace GhostHats
 {
     /// <summary>
-    /// Ghost Hats — when a player dies and turns into a spectator ghost, their hat comes with
+    /// Ghost Hats. When a player dies and turns into a spectator ghost, their hat comes with
     /// them. Purely visual and purely client-side: only players running the mod see the hats,
     /// and nothing is sent over the network.
     ///

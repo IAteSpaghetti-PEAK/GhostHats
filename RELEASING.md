@@ -4,8 +4,8 @@ The release is automated, but it has an anonymity step that is not. Do them in o
 
 ## Identity
 
-This repo commits as `Developer <developer@localhost>`, set in its **local** git config —
-`git config --local user.name` / `user.email`. There is no global identity on this machine, so a
+This repo commits as `Developer <developer@localhost>`, set in its **local** git config, so check
+`git config --local user.name` and `user.email`. There is no global identity on this machine, so a
 fresh clone commits as nobody until it's set again. Check before your first commit in a new clone:
 
 ```bash
@@ -16,9 +16,9 @@ No `Co-Authored-By` trailers in this repo's commits, ever. They carry an email a
 
 ## Cutting a release
 
-1. Bump `version_number` in `thunderstore/manifest.json`. It is the single source of truth — the
+1. Bump `version_number` in `thunderstore/manifest.json`. It is the single source of truth, so the
    csproj `<Version>`, the `PluginVersion` const in `src/Plugin.cs`, and the changelog heading
-   should match it.
+   should all match it.
 2. Add the version's entry to `thunderstore/CHANGELOG.md`. The workflow uses this file verbatim as
    the GitHub release notes.
 3. Run the packager. It writes `artifacts/GhostHats-<version>.zip` and refreshes
@@ -28,8 +28,8 @@ No `Co-Authored-By` trailers in this repo's commits, ever. They carry an email a
    powershell -ExecutionPolicy Bypass -File .\package-thunderstore.ps1
    ```
 
-4. Commit everything, including `release-assets/`. The GitHub runner can't build the mod — that
-   needs PEAK's own DLLs, which aren't public — so the binaries have to be committed.
+4. Commit everything, including `release-assets/`. The GitHub runner can't build the mod, because
+   that needs PEAK's own DLLs and those aren't public, so the binaries have to be committed.
 5. Tag and push:
 
    ```bash
@@ -45,7 +45,7 @@ No `Co-Authored-By` trailers in this repo's commits, ever. They carry an email a
    ```
 
    Find the id with `gh run list --repo IAteSpaghetti-PEAK/GhostHats`. Deleting the run does not
-   affect the release or the Thunderstore upload — both are already done by then.
+   affect the release or the Thunderstore upload. Both are already done by then.
 
 ## Thunderstore
 

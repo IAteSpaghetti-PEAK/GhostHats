@@ -8,8 +8,8 @@ namespace GhostHats
     /// Clones the ghost owner's hat onto their PlayerGhost.
     ///
     /// Placement is measured, not hardcoded: both the character and the ghost have the same
-    /// face pieces (two eye renderers and a mouth renderer), which define a face frame —
-    /// origin at the eye midpoint, right along the eye line, up towards the eyes from the
+    /// face pieces (two eye renderers and a mouth renderer), which define a face frame with
+    /// its origin at the eye midpoint, right along the eye line, up towards the eyes from the
     /// mouth, forward from their cross product. The hat's transform is expressed in the
     /// character's face frame and re-applied in the ghost's, scaled by the ratio of the two
     /// eye spacings. That survives model/prefab changes and needs no magic numbers.
@@ -90,7 +90,7 @@ namespace GhostHats
             CharacterCustomization customization = owner.refs != null ? owner.refs.customization : null;
             if (customization == null || customization.refs == null || customization.refs.playerHats == null)
             {
-                Log($"{owner.characterName} has no customization refs — no hat.");
+                Log($"{owner.characterName} has no customization refs, so no hat.");
                 return null;
             }
 
@@ -116,14 +116,14 @@ namespace GhostHats
 
             if (index < 0 || index >= hats.Length)
             {
-                Log($"Hat index {index} is out of range (0..{hats.Length - 1}) — no hat.");
+                Log($"Hat index {index} is out of range (0..{hats.Length - 1}), so no hat.");
                 return null;
             }
 
             Renderer hat = hats[index];
             if (hat == null || !HasVisibleMesh(hat))
             {
-                Log($"Hat index {index} has no mesh — no hat.");
+                Log($"Hat index {index} has no mesh, so no hat.");
                 return null;
             }
 
@@ -198,7 +198,7 @@ namespace GhostHats
             if (filter != null && filter.sharedMesh != null) return true;
             SkinnedMeshRenderer skinned = renderer as SkinnedMeshRenderer;
             if (skinned != null && skinned.sharedMesh != null) return true;
-            // Something else entirely (particles, a hat made of children) — let it through.
+            // Something else entirely (particles, a hat made of children). Let it through.
             return filter == null && skinned == null;
         }
 
