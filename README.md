@@ -1,5 +1,9 @@
 # GhostHats
 
+[![Thunderstore Version](https://img.shields.io/thunderstore/v/IAteSpaghetti/GhostHats?style=for-the-badge)](https://thunderstore.io/c/peak/p/IAteSpaghetti/GhostHats/)
+[![Thunderstore Downloads](https://img.shields.io/thunderstore/dt/IAteSpaghetti/GhostHats?style=for-the-badge)](https://thunderstore.io/c/peak/p/IAteSpaghetti/GhostHats/)
+[![Thunderstore Likes](https://img.shields.io/thunderstore/likes/IAteSpaghetti/GhostHats?style=for-the-badge)](https://thunderstore.io/c/peak/p/IAteSpaghetti/GhostHats/)
+
 Ghosts wear their player's hat. A small client-side cosmetic mod for PEAK.
 
 This file is the developer side of things. The mod page copy, meaning what it does, how to install
