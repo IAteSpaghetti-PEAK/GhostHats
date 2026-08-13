@@ -1,0 +1,21 @@
+# Thunderstore CLI (tcli) config, kept for a future automated publish.
+# The zip's own manifest.json is authoritative for version/deps.
+# Nothing here publishes on its own — `package-thunderstore.ps1` only builds the zip.
+
+[config]
+schemaVersion = "0.0.1"
+
+[package]
+namespace = "IAteSpaghetti"
+name = "GhostHats"
+versionNumber = "0.0.0" # overridden with --package-version at publish time
+description = "Dead players keep their hat. Spectator ghosts wear the hat their owner died in."
+websiteUrl = "https://github.com/IAteSpaghetti-PEAK/GhostHats"
+containsNsfwContent = false
+
+[package.dependencies]
+BepInEx-BepInExPack_PEAK = "5.4.75301"
+
+[publish]
+repository = "https://thunderstore.io"
+communities = ["peak"]

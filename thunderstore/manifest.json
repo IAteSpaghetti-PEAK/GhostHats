@@ -1,0 +1,9 @@
+{
+    "name": "GhostHats",
+    "version_number": "0.1.0",
+    "website_url": "https://github.com/IAteSpaghetti-PEAK/GhostHats",
+    "description": "Dead players keep their hat. Spectator ghosts wear the hat their owner died in. Client-side only — nobody else needs the mod.",
+    "dependencies": [
+        "BepInEx-BepInExPack_PEAK-5.4.75301"
+    ]
+}
