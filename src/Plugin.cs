@@ -16,7 +16,7 @@ namespace GhostHats
     {
         public const string PluginGuid = "com.exoflex.ghosthats";
         public const string PluginName = "GhostHats";
-        public const string PluginVersion = "0.1.0";
+        public const string PluginVersion = "0.1.1";
 
         internal static ManualLogSource Log { get; private set; }
 

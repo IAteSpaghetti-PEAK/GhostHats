@@ -22,5 +22,5 @@ ghost you can see.
 
 Hats only appear for you and other people with the mod.
 
-**Works with hat mods.** Custom hats from cosmetic mods land on ghosts too, with nothing to set up.
+**Works with hat mods.** Custom hats from cosmetic mods appear on ghosts too. Just like that.
 Tested against More Customizations and CustomHats.
