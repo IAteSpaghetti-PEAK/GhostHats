@@ -12,7 +12,8 @@ That's it. That's the whole mod.
 
 Install it with a mod manager, or drop `GhostHats.dll` into `BepInEx/plugins/`.
 
-Needs the PEAK BepInEx pack, which the mod manager pulls in for you.
+Needs the [PEAK BepInEx pack](https://thunderstore.io/c/peak/p/BepInEx/BepInExPack_PEAK/), which the
+mod manager pulls in for you.
 
 ## Simple Info
 

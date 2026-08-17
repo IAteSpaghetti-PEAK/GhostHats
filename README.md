@@ -101,7 +101,8 @@ with `<GameDir>...</GameDir>` works. The build copies `GhostHats.dll` into
 `BepInEx/plugins/GhostHats`; pass `-p:SkipDeploy=true` to skip that. The copy fails while PEAK is
 running, so use it if the game is open.
 
-Requires BepInEx 5 (the PEAK BepInEx pack).
+Requires BepInEx 5, via the
+[PEAK BepInEx pack](https://thunderstore.io/c/peak/p/BepInEx/BepInExPack_PEAK/).
 
 ## Packaging
 

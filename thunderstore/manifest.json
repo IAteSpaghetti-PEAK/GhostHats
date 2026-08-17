@@ -1,6 +1,6 @@
 {
     "name": "GhostHats",
-    "version_number": "0.1.1",
+    "version_number": "0.1.2",
     "website_url": "https://github.com/IAteSpaghetti-PEAK/GhostHats",
     "description": "See other players' hats on their ghosts. Client-side only, so nobody else needs the mod.",
     "dependencies": [
