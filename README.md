@@ -26,7 +26,8 @@ Own-ghost is skipped, mirroring vanilla hiding your own ghost from you.
 
 Hats added by other mods work with no special handling. Verified as of 2026-08-13 by decompiling
 the two frameworks that between them account for 265 dependent packages on Thunderstore:
-`cretapark/More_Customizations` (206) and `Radsi2/CustomHats` (59).
+[`cretapark/More_Customizations`](https://thunderstore.io/c/peak/p/cretapark/More_Customizations/)
+(206) and [`Radsi2/CustomHats`](https://thunderstore.io/c/peak/p/Radsi2/CustomHats/) (59).
 
 Both use the same pattern. They postfix `CharacterCustomization.Awake`, so they run on every
 character instance, local and remote. They instantiate each custom hat prefab under the character's

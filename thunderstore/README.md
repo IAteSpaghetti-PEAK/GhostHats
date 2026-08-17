@@ -23,4 +23,5 @@ ghost you can see.
 Hats only appear for you and other people with the mod.
 
 **Works with hat mods.** Custom hats from cosmetic mods appear on ghosts too. Just like that.
-Tested against More Customizations and CustomHats.
+Tested against [More Customizations](https://thunderstore.io/c/peak/p/cretapark/More_Customizations/)
+and [CustomHats](https://thunderstore.io/c/peak/p/Radsi2/CustomHats/).
