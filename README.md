@@ -22,6 +22,32 @@ Nothing is synced. The clone is local to whoever is running the mod.
 
 Own-ghost is skipped, mirroring vanilla hiding your own ghost from you.
 
+### Modded hats
+
+Hats added by other mods work with no special handling, and this was verified against
+`cretapark/More_Customizations` (the dominant PEAK cosmetics framework, 206 dependent packages on
+Thunderstore as of 2026-08-13) by decompiling it.
+
+That framework postfixes `CharacterCustomization.Awake`, so it runs on every character instance,
+local and remote. It instantiates each custom hat prefab under the character's own
+`Armature/Hip/Mid/AimJoint/Torso/Head/Hat` transform and appends the renderer to
+`refs.playerHats`. A transpiler on `SetCharacterHat` raises the index ceiling so `currentHat` can
+address the added entries.
+
+Since GhostHats reads `refs.playerHats` off the live character by that same index, and clones the
+live GameObject rather than a prefab, a custom hat resolves exactly like a vanilla one. Its
+position and rotation offsets are baked into the renderer's world transform by the time we measure
+it, so the face-frame mapping carries them over without knowing they exist. The same holds for any
+mod that swaps a mesh or material on an existing hat renderer.
+
+If the owner has a hat mod that the viewer lacks, `currentHat` lands outside the viewer's shorter
+`playerHats`, the bounds check logs it, and the ghost simply gets no hat.
+
+The one case that would not survive is a custom hat whose prefab root has no renderer but has
+several renderer children. Only the first would be cloned. That case is already broken in the
+framework itself, since vanilla's activation loop toggles only that same single renderer, so custom
+hats are effectively single-renderer in practice.
+
 ### Placement
 
 The ghost prefab's hierarchy isn't recoverable from a decompile, and the Unity name tables in
